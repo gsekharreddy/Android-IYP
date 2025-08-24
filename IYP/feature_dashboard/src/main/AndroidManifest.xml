@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!--
+        A feature module's manifest is usually very empty.
+        You only declare components (like Activities, Services, etc.)
+        that are specific to this module, and they should NOT have
+        a LAUNCHER intent filter. Since you are using Fragments for
+        everything, this file can be completely empty.
+        -->
+    </application>
+
+</manifest>

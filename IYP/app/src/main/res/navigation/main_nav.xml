@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/dashboardFragment">
+
+    <!-- The Home Screen -->
+    <!-- IMPORTANT: Replace this name with your actual DashboardFragment path -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.feature_dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_tasks"
+            app:destination="@id/taskManagerFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_notes"
+            app:destination="@id/notesFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_habits"
+            app:destination="@id/habitTrackerFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_expenses"
+            app:destination="@id/expenseTrackerFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_calendar"
+            app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_whiteboard"
+            app:destination="@id/whiteboardFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_mood"
+            app:destination="@id/moodJournalFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_relaxation"
+            app:destination="@id/relaxationFragment" />
+    </fragment>
+
+    <!-- Destination Fragments (One for each feature module) -->
+    <!-- TODO: Go through and verify EVERY android:name attribute below -->
+    <fragment
+        android:id="@+id/taskManagerFragment"
+        android:name="com.example.feature_taskmanager.TaskManagerFragment"
+        android:label="Task Manager"
+        tools:layout="@layout/fragment_task_manager" />
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.example.feature_notes.NotesFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/habitTrackerFragment"
+        android:name="com.example.feature_habittracker.HabitTrackerFragment"
+        android:label="Habit Tracker"
+        tools:layout="@layout/fragment_habit_tracker" />
+    <fragment
+        android:id="@+id/expenseTrackerFragment"
+        android:name="com.example.feature_expensetracker.ExpenseTrackerFragment"
+        android:label="Expense Tracker"
+        tools:layout="@layout/fragment_expense_tracker" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.feature_calendar.CalendarFragment"
+        android:label="Calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/whiteboardFragment"
+        android:name="com.example.feature_whiteboard.WhiteboardFragment"
+        android:label="Whiteboard"
+        tools:layout="@layout/fragment_whiteboard" />
+    <fragment
+        android:id="@+id/moodJournalFragment"
+        android:name="com.example.feature_moodjournal.MoodJournalFragment"
+        android:label="Mood Journal"
+        tools:layout="@layout/fragment_mood_journal" />
+    <fragment
+        android:id="@+id/relaxationFragment"
+        android:name="com.example.feature_relaxation.RelaxationFragment"
+        android:label="Relaxation"
+        tools:layout="@layout/fragment_relaxation" />
+
+</navigation>
