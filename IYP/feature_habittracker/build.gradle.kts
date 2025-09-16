@@ -36,8 +36,9 @@ android {
 
 dependencies {
     // This part is correct!
-    implementation(libs.navigation.fragment)
-    implementation(libs.navigation.ui)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation(project(":core"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

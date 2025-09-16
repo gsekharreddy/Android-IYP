@@ -6,7 +6,6 @@
     app:startDestination="@id/dashboardFragment">
 
     <!-- The Home Screen -->
-    <!-- IMPORTANT: Replace this name with your actual DashboardFragment path -->
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.example.feature_dashboard.DashboardFragment"
@@ -39,46 +38,72 @@
     </fragment>
 
     <!-- Destination Fragments (One for each feature module) -->
-    <!-- TODO: Go through and verify EVERY android:name attribute below -->
+    <!-- FIXED: Changed this back to a <fragment> tag -->
     <fragment
         android:id="@+id/taskManagerFragment"
         android:name="com.example.feature_taskmanager.TaskManagerFragment"
         android:label="Task Manager"
-        tools:layout="@layout/fragment_task_manager" />
+        tools:layout="@layout/fragment_task_manager">
+        <!-- Actions from the task list to its detail/add screens -->
+        <action
+            android:id="@+id/action_taskManager_to_addTask"
+            app:destination="@id/addTaskActivity" />
+        <action
+            android:id="@+id/action_taskManager_to_taskDetail"
+            app:destination="@id/taskDetailActivity" />
+    </fragment>
+
     <fragment
         android:id="@+id/notesFragment"
         android:name="com.example.feature_notes.NotesFragment"
         android:label="Notes"
         tools:layout="@layout/fragment_notes" />
+
     <fragment
         android:id="@+id/habitTrackerFragment"
         android:name="com.example.feature_habittracker.HabitTrackerFragment"
         android:label="Habit Tracker"
         tools:layout="@layout/fragment_habit_tracker" />
+
     <fragment
         android:id="@+id/expenseTrackerFragment"
         android:name="com.example.feature_expensetracker.ExpenseTrackerFragment"
         android:label="Expense Tracker"
         tools:layout="@layout/fragment_expense_tracker" />
+
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.example.feature_calendar.CalendarFragment"
         android:label="Calendar"
         tools:layout="@layout/fragment_calendar" />
+
     <fragment
         android:id="@+id/whiteboardFragment"
         android:name="com.example.feature_whiteboard.WhiteboardFragment"
         android:label="Whiteboard"
         tools:layout="@layout/fragment_whiteboard" />
+
     <fragment
         android:id="@+id/moodJournalFragment"
         android:name="com.example.feature_moodjournal.MoodJournalFragment"
         android:label="Mood Journal"
         tools:layout="@layout/fragment_mood_journal" />
+
     <fragment
         android:id="@+id/relaxationFragment"
         android:name="com.example.feature_relaxation.RelaxationFragment"
         android:label="Relaxation"
         tools:layout="@layout/fragment_relaxation" />
+
+
+    <!-- Activity Destinations for the Task Manager -->
+    <activity
+        android:id="@+id/addTaskActivity"
+        android:name="com.example.feature_taskmanager.AddTaskActivity"
+        android:label="AddTaskActivity" />
+    <activity
+        android:id="@+id/taskDetailActivity"
+        android:name="com.example.feature_taskmanager.TaskDetailActivity"
+        android:label="TaskDetailActivity" />
 
 </navigation>
